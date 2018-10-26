@@ -1,4 +1,5 @@
 import os
+from decouple import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -6,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'mvzy12e%b=#16+c@^2ek$uqj2#1vp#%@5&!f9iyg+4b!twzyip'
+SECRET_KEY = config('SECRET_KEY')
 
 # Application definition
 INSTALLED_APPS = [
